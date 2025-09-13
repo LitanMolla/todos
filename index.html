@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List - Home</title>
+    <!-- Tailwindcss CDN -->
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-gradient-to-r from-gray-900 to-slate-800 min-h-screen flex justify-center items-center">
+    <main class="max-w-md w-full mx-auto bg-slate-800 px-4 p-5 rounded-xl shadow shadow-gray-700 border border-gray-700 space-y-5">
+        <h1 class="text-2xl font-semibold text-gray-100 text-center">Todo List</h1>
+        <input id="input_task" type="text" placeholder="Enter Task" class="bg-gray-100 w-full text-center border border-gray-700 rounded-md py-2">
+        <button id="submit_btn" class="border border-gray-600 bg-slate-600 text-gray-100 w-full rounded-md py-2 cursor-pointer duration-300 hover:scale-105">Submit</button>
+        
+         <ul id="task_container" class="space-y-2">
+         </ul>
+    </main>
+    <!-- Js connect -->
+     <script src="./app.js"></script>
+</body>
+</html>

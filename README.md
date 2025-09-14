@@ -10,6 +10,9 @@ This is a simple **Todo List** application that allows users to **add**, **view*
 - **View Tasks**: Display all tasks in a list.  
 - **Delete Task**: Remove tasks as needed.  
 - **LocalStorage**: Tasks persist even after refreshing the page.  
+- **Edit Task**
+- **Delete all Task**
+
 
 ---
 

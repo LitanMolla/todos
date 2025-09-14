@@ -9,7 +9,10 @@ submitBtn.addEventListener('click', () => {
     const task = inputTask.value;
     const finder = todos.find(item => item === task);
     if (finder) {
-        return alert('This task alredy avilable, please add new task')
+        return alert('This task alredy avilable, please add new task');
+    }
+    if (task === '') {
+        return alert('Please write your task frist')
     }
     todos.push(task);
     inputTask.value = '';

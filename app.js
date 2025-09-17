@@ -15,6 +15,7 @@ submitBtn.addEventListener('click', () => {
     if (task === '') {
         return alert('Please write your task frist')
     }
+    
     todos.push(task);
     inputTask.value = '';
     showTodos(todos);

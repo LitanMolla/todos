@@ -5,7 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo List - Home</title>
-    <!-- Tailwindcss CDN -->
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <!-- Tailwindcss and daisyui CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 
@@ -18,11 +21,38 @@
         <button id="submit_btn"
             class="border border-gray-600 bg-green-600 text-gray-100 w-full rounded-md py-2 cursor-pointer duration-300 hover:scale-105">Submit</button>
 
-        <ul id="task_container" class="space-y-2">
-        </ul>
-        <button id="delete_btn"
-            class="border border-gray-600 bg-red-500 text-gray-100 w-full rounded-md py-2 cursor-pointer duration-300 hover:scale-105">Delete
-            all</button>
+        <!-- <ul id="task_container" class="space-y-2">
+        </ul> -->
+        <div id="task_container" class="space-y-2">
+            <!--  -->
+        </div>
+        <div class="flex justify-between gap-5">
+            <button id="delete_btn"
+                class="border border-gray-600 bg-red-500 text-gray-100 w-1/2 rounded-md py-2 cursor-pointer duration-300 hover:scale-105">Delete
+                Selected</button>
+            <button id="done_btn"
+                class="border border-gray-600 bg-green-700 text-gray-100 w-1/2 rounded-md py-2 cursor-pointer duration-300 hover:scale-105">Complete
+                Selected</button>
+        </div>
+        <!-- Modal -->
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_1" class="modal">
+            <div class="modal-box">
+                <div class="w-full space-y-2">
+                    <p class="font-semibold text-xl">Update task</p>
+                    <textarea class="w-full px-4 py-2 rounded-md" id="update-value"
+                        placeholder="Type your task here"></textarea>
+                    <div class="modal-action justify-start mt-2">
+                    <form  method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button id="save-edit" class="bg-green-700 rounded-md px-4 py-2 text-gray-100 cursor-pointer">Save</button>
+                    </form>
+                </div>
+                </div>
+                
+            </div>
+        </dialog>
+        <!-- Modal End -->
     </main>
     <!-- Js connect -->
     <script src="./app.js"></script>
